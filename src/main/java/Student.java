@@ -1,16 +1,22 @@
-import javafx.scene.control.TableColumn;
-
+/*
+    *An instance of Student.
+ */
 public class Student {
-
+    private int userID;
     private String firstName;
-    private final String lastName;
+    private String lastName;
 
-    public Student(String firstName, String lastName) {
+    public Student() {
 
+    }
+    public Student(int userID, String firstName, String lastName) {
+        this.userID = userID;
         this.firstName = firstName;
         this.lastName = lastName;
     }
-
+    public int getUserID() {
+        return userID;
+    }
     public String getFirstName() {
         return firstName;
     }
@@ -19,6 +25,9 @@ public class Student {
     }
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     @Override
