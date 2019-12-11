@@ -111,9 +111,9 @@ public class CreateGUI extends Application {
             public void handle(ActionEvent event) {
                 try {
                     //Login details for mySQL database stored in variables.
-                    String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
-                    String username = "root";
-                    String password = "rootroot";
+                    String dbUrl = "jdbc:mysql://db-mysql-lon1-66576-do-user-6865377-0.db.ondigitalocean.com:25060/defaultdb";
+                    String username = "doadmin";
+                    String password = "ooba6jikidn93k2p";
                     //Store query as a String variable.
                     String query = "INSERT INTO person (firstname, lastname) VALUES (?,?)";
                     //Create the connection which passes the login details.
@@ -153,9 +153,9 @@ public class CreateGUI extends Application {
      */
     public List<Student> getTable() throws SQLException {
         //Connect to database.
-        String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
-        String username = "root";
-        String password = "rootroot";
+        String dbUrl = "jdbc:mysql://db-mysql-lon1-66576-do-user-6865377-0.db.ondigitalocean.com:25060/defaultdb";
+        String username = "doadmin";
+        String password = "ooba6jikidn93k2p";
         //Create connection.
         Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
         //Create statement.
@@ -230,9 +230,9 @@ public class CreateGUI extends Application {
         //Random print for testing purposes.
         System.out.print(selectedItems);
         //Connect to database blah blah you've seen this shit previously.
-        String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
-        String username = "root";
-        String password = "rootroot";
+        String dbUrl = "jdbc:mysql://db-mysql-lon1-66576-do-user-6865377-0.db.ondigitalocean.com:25060/defaultdb";
+        String username = "doadmin";
+        String password = "ooba6jikidn93k2p";
         String query = ("DELETE FROM person WHERE firstname ='" + firstColumn + "'");
         System.out.println(query);
 
@@ -279,9 +279,9 @@ public class CreateGUI extends Application {
             int getPersonID = student.getUserID();
             String getFirstName = student.getFirstName();
             String getLastName = student.getLastName();
-            String dbUrl = "jdbc:mysql://localhost:3306/rmsdb";
-            String username = "root";
-            String password = "rootroot";
+            String dbUrl = "jdbc:mysql://db-mysql-lon1-66576-do-user-6865377-0.db.ondigitalocean.com:25060/defaultdb";
+            String username = "doadmin";
+            String password = "ooba6jikidn93k2p";
             //Update person table and set first/last name to the first/last name we have grabbed from the gets where the ID is the same as the ID we fetched from the get.
             String query = ("UPDATE person SET firstname='" + getFirstName + "', lastname='" + getLastName + "' WHERE id='" + getPersonID + "'");
             Connection myConnection = DriverManager.getConnection(dbUrl, username, password);
